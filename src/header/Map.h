@@ -2,6 +2,7 @@
 #define MAP_H
 
 #include<SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 
 class Map{
@@ -16,4 +17,6 @@ class Map{
     private:
         char **map;
 
-}
+};
+
+#endif

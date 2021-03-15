@@ -2,6 +2,7 @@
 #define ENGINE_H
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <iostream>
 #include "Pacman.h"
 #include "Map.h"
@@ -14,7 +15,7 @@ class Engine{
 
         // init function
         bool initWindowAndRender();
-        bool initPacman();
+        bool initPacman(SDL_Renderer * &gRenderer);
         bool initMap();
 
     private:
@@ -25,4 +26,6 @@ class Engine{
         Pacman *pacman;
         Map* map;
 
-}
+};
+
+#endif

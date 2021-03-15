@@ -1,14 +1,15 @@
 #include "Map.h"
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <iostream>
 
 using namespace std;
 
-void Map::Map() {
+Map::Map() {
     return;
 }
 
-void Map::~Map() {
+Map::~Map() {
     return;
 }
 

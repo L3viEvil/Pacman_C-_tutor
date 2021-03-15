@@ -1,10 +1,12 @@
 #include "Engine.h"
-#include <SLD2/SDL.h>
+#include "Config.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <iostream>
 
 using namespace std;
 
-bool initWindowAndRender() {
+bool Engine::initWindowAndRender() {
 
     // Initialization flag
     bool success = true;
@@ -58,13 +60,13 @@ bool initWindowAndRender() {
 	return success;
 }
  
-bool initPacman() {
-    this->pacman = new Pacman();
+bool Engine::initPacman(SDL_Renderer * &gRenderer) {
+    this->pacman = new Pacman(gRenderer);
 
     return true;
 }
 
-bool initMap() {
+bool Engine::initMap() {
     this->map = new Map();
 
     return true;
@@ -80,7 +82,7 @@ bool Engine::init() {
     */
 
     this->initWindowAndRender();
-    this->initPacman();
+    this->initPacman(this->gRenderer);
     this->initMap();
 
     return true;
