@@ -1,7 +1,7 @@
 #include "Pacman.h"
 #include <iostream>
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+// #include <SDL2/SDL.h>
+// #include <SDL2/SDL_image.h>
 #include <string>
 
 Pacman::Pacman(SDL_Renderer * &gRenderer) {

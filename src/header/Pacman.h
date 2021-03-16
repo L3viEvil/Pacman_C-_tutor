@@ -44,9 +44,6 @@ class Pacman{
             "/home/ailab/Desktop/pacman/assert/img/pacman_links_1.png"
         };
 
-
-
-
     private:
         // SDL_Texture *pacmanTexture;
         int width;

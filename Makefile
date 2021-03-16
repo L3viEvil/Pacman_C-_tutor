@@ -1,9 +1,9 @@
-LIBFLAGS = -L. -lSDL2 -lSDL2_image
+LIBFLAGS = -lSDL2 -lSDL2_image
 SRC = ./src/cpp
 HEADER = ./src/header
 
 output: main.o Engine.o Pacman.o Map.o
-	g++ main.o Engine.o -o output #$(LIBFLAGS)
+	g++ main.o Engine.o Pacman.o Map.o -o output $(LIBFLAGS)
 
 Pacman.o: $(SRC)/Pacman.cpp 
 	g++ -c $(SRC)/Pacman.cpp -I $(HEADER)
