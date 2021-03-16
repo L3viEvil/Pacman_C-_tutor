@@ -5,6 +5,7 @@
 #include <SDL2/SDL_image.h>
 #include <iostream>
 #include <string>
+#include "LTexture.h"
 
 using namespace std;
 
@@ -26,22 +27,24 @@ class Pacman{
         int get_x();
         int get_y();
 
+        void handleEvent( SDL_Event& e );
+		void move();
 
         void renderCurrent(SDL_Renderer* &gRenderer);
         bool loadMedia(SDL_Renderer* &gRenderer);
-        SDL_Texture* loadTexture( std::string path, SDL_Renderer* &gRenderer);
 
         int animatedState = 0;
-        SDL_Texture *pacmanTexture[8];
+        // Using class LTexture 
+        LTexture pacmanTexture[8];
         string pacmanTexturePath[8] = {
-            "/home/ailab/Desktop/pacman/assert/img/pacman_links_1.png",
-            "/home/ailab/Desktop/pacman/assert/img/pacman_links_2.png",
-            "/home/ailab/Desktop/pacman/assert/img/pacman_links_1.png",
-            "/home/ailab/Desktop/pacman/assert/img/pacman_links_1.png",
-            "/home/ailab/Desktop/pacman/assert/img/pacman_links_1.png",
-            "/home/ailab/Desktop/pacman/assert/img/pacman_links_1.png",
-            "/home/ailab/Desktop/pacman/assert/img/pacman_links_1.png",
-            "/home/ailab/Desktop/pacman/assert/img/pacman_links_1.png"
+            "./assert/img/pacman_links_1.png",
+            "./assert/img/pacman_links_2.png",
+            "./assert/img/pacman_links_1.png",
+            "./assert/img/pacman_links_1.png",
+            "./assert/img/pacman_links_1.png",
+            "./assert/img/pacman_links_1.png",
+            "./assert/img/pacman_links_1.png",
+            "./assert/img/pacman_links_1.png"
         };
 
     private:
